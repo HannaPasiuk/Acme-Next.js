@@ -52,9 +52,9 @@ export async function updateInvoice(id: string, formData: FormData) {
     SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
     WHERE id = ${id}
   `;
- 
-  revalidatePath('/dashboard/invoices');
-  redirect('/dashboard/invoices');
+   revalidatePath('/dashboard/invoices');
+   redirect('/dashboard/invoices');
+
 }
 
 export async function deleteInvoice(id: string) {
